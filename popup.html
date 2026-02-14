@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PDF Download Timer</h1>
+
+    <div class="settings">
+      <label for="url-input">URL:</label>
+      <input type="url" id="url-input" placeholder="https://example.com/file.pdf">
+
+      <label for="interval-input">Interval (mp):</label>
+      <input type="number" id="interval-input" min="10" step="1" value="300">
+
+      <div class="button-row">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn" disabled>Stop</button>
+        <button id="run-now-btn">Run Now</button>
+      </div>
+
+      <div id="status" class="status">Idle</div>
+    </div>
+
+    <div class="log-section">
+      <div class="log-header">
+        <h2>Timing Log</h2>
+        <div class="log-actions">
+          <button id="export-btn" class="small-btn">CSV Export</button>
+          <button id="clear-log-btn" class="small-btn">Clear</button>
+        </div>
+      </div>
+      <table id="log-table">
+        <thead>
+          <tr>
+            <th>Idő</th>
+            <th>Duration (ms)</th>
+            <th>Méret (KB)</th>
+            <th>Típus</th>
+            <th>Státusz</th>
+          </tr>
+        </thead>
+        <tbody id="log-body"></tbody>
+      </table>
+      <div id="empty-log" class="empty-message">Még nincs futás.</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

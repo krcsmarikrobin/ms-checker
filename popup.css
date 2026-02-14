@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 460px;
+  min-height: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #555;
+}
+
+input[type="url"],
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2196F3;
+}
+
+input:disabled {
+  background: #f5f5f5;
+  color: #999;
+}
+
+.button-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#start-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+#start-btn:hover:not(:disabled) {
+  background: #43A047;
+}
+
+#stop-btn {
+  background: #f44336;
+  color: white;
+}
+
+#stop-btn:hover:not(:disabled) {
+  background: #E53935;
+}
+
+#run-now-btn {
+  background: #2196F3;
+  color: white;
+}
+
+#run-now-btn:hover:not(:disabled) {
+  background: #1E88E5;
+}
+
+.status {
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.running {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.log-section {
+  margin-top: 16px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.small-btn {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background: #ddd;
+}
+
+.log-actions {
+  display: flex;
+  gap: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+th, td {
+  padding: 5px 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #555;
+  position: sticky;
+  top: 0;
+}
+
+td:nth-child(2) {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: 600;
+}
+
+tr.success td:nth-child(2) {
+  color: #2e7d32;
+}
+
+tr.failure td {
+  color: #c62828;
+}
+
+.empty-message {
+  color: #999;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+#log-table {
+  display: none;
+}
+
+#log-table.visible {
+  display: table;
+}
